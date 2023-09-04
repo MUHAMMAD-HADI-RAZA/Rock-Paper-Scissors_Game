@@ -17,7 +17,7 @@ class Rock_Paper_Scissors_Game:
         self.Choices = ["rock", "paper", "scissors"]
         self.Data = []
 
-        self.Label = tk.Label(root, text="CLICK!! ROCK!! PAPER!! OR SCISSORS!!", font=("Times New Roman", 16, "bold underline"), fg="black", bg=BackGround_Color)
+        self.Label = tk.Label(root, text="HEY!! CHOOSE!! ROCK!! PAPER!! OR SCISSORS!!", font=("Times New Roman", 16, "bold underline"), fg="black", bg=BackGround_Color)
         self.Label.pack(pady=10)
 
         self.Button_Frame = tk.Frame(root, bg=BackGround_Color)
