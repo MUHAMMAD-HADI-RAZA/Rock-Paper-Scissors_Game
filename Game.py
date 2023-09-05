@@ -26,7 +26,7 @@ class Rock_Paper_Scissors_Game:
         self.User_Choice = tk.StringVar()
 
         for choice in self.Choices:
-            Button = tk.Button(self.Button_Frame, text=choice.capitalize(), command=lambda choice=choice: self.Play(choice), width=10, font=("Times New Roman", 12, "bold"))
+            Button = tk.Button(self.Button_Frame, text=choice.upper(), command=lambda choice=choice: self.Play(choice), width=10, font=("Times New Roman", 12, "bold"))
             Button.pack(side=tk.LEFT, padx=10)
 
         self.Result_Label = tk.Label(root, text="", padx=20, font=("Xenara", 14, "bold"), fg="black", bg=BackGround_Color)
@@ -52,7 +52,7 @@ class Rock_Paper_Scissors_Game:
             Result_Text = "COMPUTER WINS!!"
             self.Computer_Score +=1
 
-        self.Result_Label.config(text=f"COMPUTER CHOOSE {Computer_Choice.upper()}. {Result_Text}", font=("Times New Roman", 14, "bold"))
+        self.Result_Label.config(text=f"COMPUTER CHOOSE {Computer_Choice.upper()}. {Result_Text}", font=("Times New Roman", 12, "bold"))
         self.Update_Score_Label()
 
         self.Data.append((User_Choice.upper(), Computer_Choice.upper(), Result_Text))
